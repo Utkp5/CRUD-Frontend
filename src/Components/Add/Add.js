@@ -19,13 +19,24 @@ function Add() {
 
       const user = {name,email,phoneno,favouriteplace}
 
+      if (!name || !email || !phoneno || !favouriteplace) {
+        alert(`Bohot chalak.... bro U are very chalak fields can not be empty! `);        
+      }
+      else if (phoneno.length > 10 || phoneno.length < 10) {
+        alert(`Wrong phone number`);
+      }
+      else if (!email.includes('@')) {
+        alert(`Wrong Email typed!`);
+      }
+
       const add = await axios.post("http://localhost:5000/api/crud/add",user);
 
       if (add) {
         console.log(add.data);
         alert('Data Inserted Successfully');
         window.location.href = "/";
-      }
+      }     
+      
 
 
 
@@ -49,7 +60,6 @@ function Add() {
         <ul className="nav-links">
           <li><NavLink className="navlink" to="/">Home</NavLink></li>
           <li><NavLink className="navlink" to="/Add">Add</NavLink></li>
-          <li><NavLink className="navlink" to="/Update">Update</NavLink></li>
         </ul>
         
         <div className="burger">
