@@ -1,6 +1,6 @@
 <h2>Welcome to CRUD Project!</h2>
 
-This is a simple CRUD project that allows users to Create, Read, Update, and Delete data in a user-friendly way. This project is built using [insert programming language or framework here] and is perfect for beginners who want to learn how to build CRUD applications.
+This is a simple CRUD project that allows users to Create, Read, Update, and Delete data in a user-friendly way. This project is built using MERN and is perfect for beginners who want to learn how to build CRUD applications.
 
 Getting Started
 To get started with the project, you'll need to follow these simple steps:
