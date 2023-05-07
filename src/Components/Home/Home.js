@@ -1,8 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import axios from "axios";
 
 function Home() {
+
+  const [display,setdisplay] = useState([]);
+
+  const displayData = async() => {
+
+    try {
+
+      const res = await axios.get("http://localhost:5000/api/crud/get-all");
+      console.log(res);
+      const final = res.data;
+      console.log(final);
+      setdisplay(final);
+
+      
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
+
+  useEffect(() => {
+    displayData()
+  },[])
+
+  const random = () => {
+    displayData();
+  }
+
+
+  //update
+  const handleUpdate = async() => {
+
+    try {
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  //delete
+  const handleDelete = async(_id) => {
+
+    try {
+
+      // const {id}  = useParams();
+
+      await axios.delete(`http://localhost:5000/api/crud/delete/${_id}`); 
+      random();
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+
   return (
     <div>
 
@@ -44,28 +101,20 @@ function Home() {
            </tr>
          </thead>
          <tbody>
-           <tr>
-             <td>Data 1</td>
-             <td>Data 2</td>
-             <td>Data 3</td>
-             <td>Data 4</td>
-             <td>Data 5</td>
-             <button className="btn btn_upd">Update</button> <button className="btn btn_del">Delete</button>
-           </tr>
-           <tr>
-             <td>Data 1</td>
-             <td>Data 2</td>
-             <td>Data 3</td>
-             <td>Data 4</td>
-             <td>Data 5</td>
-           </tr>
-           <tr>
-             <td>Data 1</td>
-             <td>Data 2</td>
-             <td>Data 3</td>
-             <td>Data 4</td>
-             <td>Data 5</td>
-           </tr>
+           {
+             display.map((dis,index) => {
+               return (
+                <tr>
+                    <td>{index + 1}</td>
+                    <td>{dis.name}</td>
+                    <td>{dis.email}</td>
+                    <td>{dis.phoneno}</td>
+                    <td>{dis.favouriteplace}</td>
+                    <button className="btn btn_upd" onClick={handleUpdate}>Update</button> <button className="btn btn_del" onClick={() => handleDelete(dis._id)}>Delete</button>
+                </tr>
+               )
+             })             
+            }        
          </tbody>
        </table>
        </div>
