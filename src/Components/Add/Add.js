@@ -24,7 +24,6 @@ function Add() {
       if (add) {
         console.log(add.data);
         alert('Data Inserted Successfully');
-        setname('');
         window.location.href = "/";
       }
 
