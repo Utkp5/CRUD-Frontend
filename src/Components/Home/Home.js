@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 function Home() {
@@ -33,13 +33,7 @@ function Home() {
   }
 
 
-  //update
-  const handleClick = async(id) => {
-
-    window.location.href = `/Update/${id}`
-    
-  }
-
+  
   //delete
   const handleDelete = async(_id) => {
 
