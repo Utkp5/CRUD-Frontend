@@ -34,7 +34,7 @@ function Update() {
 
   useEffect(() => {
     loadData();
-  },[])
+  })
 
 
   const HandleUpdate = async() => {
