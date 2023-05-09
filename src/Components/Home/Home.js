@@ -100,7 +100,7 @@ function Home() {
                     <td>{dis.email}</td>
                     <td>{dis.phoneno}</td>
                     <td>{dis.favouriteplace}</td>
-                    <button className="btn btn_upd" onClick={() => window.location.href = "/Update/" + dis._id}>Update</button> <button className="btn btn_del" onClick={() => handleDelete(dis._id)}>Delete</button>
+                    <button className="btn btn_upd" onClick={() => window.location.href = "Update/" + dis._id}>Update</button> <button className="btn btn_del" onClick={() => handleDelete(dis._id)}>Delete</button>
                 </tr>
                )
              })             
