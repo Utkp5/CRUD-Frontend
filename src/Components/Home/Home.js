@@ -11,7 +11,7 @@ function Home() {
 
     try {
 
-      const res = await axios.get("http://localhost:5000/api/crud/get-all");
+      const res = await axios.get("https://wild-pink-coati-tie.cyclic.app/api/crud/get-all");
       console.log(res);
       const final = res.data;
       console.log(final);
@@ -41,7 +41,7 @@ function Home() {
 
       // const {id}  = useParams();
 
-      await axios.delete(`http://localhost:5000/api/crud/delete/${_id}`); 
+      await axios.delete(`https://wild-pink-coati-tie.cyclic.app/api/crud/delete/${_id}`); 
       random();
       
     } catch (error) {

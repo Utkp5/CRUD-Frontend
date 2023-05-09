@@ -29,7 +29,7 @@ function Add() {
         alert(`Wrong Email typed!`);
       }
 
-      const add = await axios.post("http://localhost:5000/api/crud/add",user);
+      const add = await axios.post("https://wild-pink-coati-tie.cyclic.app/api/crud/add",user);
 
       if (add) {
         console.log(add.data);

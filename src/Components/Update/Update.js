@@ -22,7 +22,7 @@ function Update() {
   const loadData = async() => {
     try { 
       
-      const res = await axios.get(`http://localhost:5000/api/crud/get-single/${id}`);
+      const res = await axios.get(`https://wild-pink-coati-tie.cyclic.app/api/crud/get-single/${id}`);
       const final = res.data;
       setupdate(final);
       console.log(final);
@@ -41,7 +41,7 @@ function Update() {
 
     try {
 
-      const res = await axios.put(`http://localhost:5000/api/crud/update/${id}`,update);
+      const res = await axios.put(`https://wild-pink-coati-tie.cyclic.app/api/crud/update/${id}`,update);
       const final = res.data;
       setupdate(final);
       console.log(final);
