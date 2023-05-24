@@ -34,7 +34,7 @@ function Update() {
 
   useEffect(() => {
     loadData();
-  })
+  },[])
 
 
   const HandleUpdate = async() => {
@@ -96,10 +96,10 @@ function Update() {
                 <input type="email" id="email" name="email"   onChange={(e)  =>onValueChange(e)} value={email}/>
                 
                 <label className='add_label' for="phone">Phone Number:</label>
-                <input type="number" id="phone" name="phone"   onChange={(e) =>onValueChange(e)} value={phoneno}/>
+                <input type="number" id="phone" name="phoneno"   onChange={(e) =>onValueChange(e)} value={phoneno}/>
                 
                 <label className='add_label' for="place">Favourite Place:</label>
-                <input type="text" id="place" name="place"   onChange={(e) => onValueChange(e)} value={favouriteplace}/>
+                <input type="text" id="place" name="favouriteplace"   onChange={(e) => onValueChange(e)} value={favouriteplace}/>
                 
                 <input type="submit" value="Submit" onClick={HandleUpdate}/>
             </div>

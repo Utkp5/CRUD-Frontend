@@ -77,11 +77,11 @@ function Add() {
                 <label className='add_label' for="email">Email:</label>
                 <input type="email" id="email" name="email"  required onChange={(e) => setemail(e.target.value)}/>
                 
-                <label className='add_label' for="phone">Phone Number:</label>
-                <input type="number" id="phone" name="phone"  required onChange={(e) => setphoneno(e.target.value)}/>
+                <label className='add_label' for="phoneno">Phone Number:</label>
+                <input type="number" id="phone" name="phoneno"  required onChange={(e) => setphoneno(e.target.value)}/>
                 
-                <label className='add_label' for="place">Favourite Place:</label>
-                <input type="text" id="place" name="place"  required onChange={(e) => setfavouriteplace(e.target.value)}/>
+                <label className='add_label' for="favouriteplace">Favourite Place:</label>
+                <input type="text" id="place" name="favouriteplace"  required onChange={(e) => setfavouriteplace(e.target.value)}/>
                 
                 <input type="submit" value="Submit" onClick={Handleadd}/>
             </div>
