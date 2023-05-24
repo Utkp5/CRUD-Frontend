@@ -58,7 +58,7 @@ function Update() {
 
   const onValueChange = (e) => {
     console.log(e.target.value);
-    setupdate({...update, [e.target.name]: e.target.value}) [] -> key : value 
+    setupdate({...update, [e.target.name]: e.target.value}) //[] -> key : value 
 }
 
 
