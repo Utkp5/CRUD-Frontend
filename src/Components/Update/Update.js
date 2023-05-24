@@ -15,7 +15,7 @@ function Update() {
   }
   
   const[update,setupdate] = useState(initialValue);
-  const {name,email,phoneno,favouriteplace} = update;
+  const {name,email,phoneno,favouriteplace} = update; 
 
 
 
@@ -58,7 +58,7 @@ function Update() {
 
   const onValueChange = (e) => {
     console.log(e.target.value);
-    setupdate({...update, [e.target.name]: e.target.value})
+    setupdate({...update, [e.target.name]: e.target.value}) [] -> key : value 
 }
 
 
